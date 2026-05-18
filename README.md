@@ -38,7 +38,7 @@ com.example.dermacare
 │   └── WelcomeViewModel
 Setup Instructions
 1. Clone the project
-git clone <>
+git clone <https://github.com/fkanwal/DermaCare>
 2. Open in Android Studio
 Open Android Studio
 Click “Open Project”
