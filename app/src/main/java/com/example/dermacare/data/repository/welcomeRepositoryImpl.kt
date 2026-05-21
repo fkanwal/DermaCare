@@ -1,4 +1,4 @@
-package com.example.dermacare.data.repsoitory
+package com.example.dermacare.data.repository
 
 import com.example.dermacare.domain.repository.welcomeRepository
 

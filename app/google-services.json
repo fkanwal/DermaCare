@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "959961201108",
+    "project_id": "dermacare-5b5a5",
+    "storage_bucket": "dermacare-5b5a5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959961201108:android:0ab4d83b4924e224407e41",
+        "android_client_info": {
+          "package_name": "com.example.dermacare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959961201108-hklqcd0jik0act2fi7cc2onih30u8s4o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dermacare",
+            "certificate_hash": "3c8ad08bea6d2ec87d830c1e10fe3f646a8bdae0"
+          }
+        },
+        {
+          "client_id": "959961201108-k7lsms4dg9tc6385o060rs7v3tbsks24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqbhs9MiT9udXuSPPWNRMKktaR_QVEy3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959961201108-k7lsms4dg9tc6385o060rs7v3tbsks24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

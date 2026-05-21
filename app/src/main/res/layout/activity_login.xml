@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skin Care App"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingStart="10dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Email:"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>/>
+        <EditText
+            android:id="@+id/etlEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Password:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>/>
+
+        <EditText
+            android:id="@+id/etlPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#A7BDF2"
+                android:text="Login"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnsignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="#A7BDF2"
+                android:text="Signup"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnGoogleSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Sign in with Google"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:drawablePadding="8dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+
+

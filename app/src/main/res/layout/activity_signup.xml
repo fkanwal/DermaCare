@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skin Care App"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingStart="10dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Name:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Password:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Age -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Age:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:layout_marginBottom="25dp"
+            />
+
+        <!-- Signup Button -->
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A7BDF2"
+            android:text="Signup"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/loginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login "
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+</ScrollView>
