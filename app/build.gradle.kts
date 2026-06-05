@@ -42,6 +42,24 @@ android {
         compose = true
         viewBinding = true
     }
+    packaging {  // ← defaultConfig ke bahar
+        resources {
+            excludes += setOf(
+                "META-INF/INDEX.LIST",
+                "META-INF/DEPENDENCIES",
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.txt",
+                "META-INF/io.netty.versions.properties",
+                "META-INF/*.kotlin_module",
+                "META-INF/AL2.0",
+                "META-INF/LGPL2.1"
+
+            )
+        }
+    }
+
 }
 
 dependencies {
@@ -68,9 +86,11 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     // Room
-    implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-runtime:2.7.0")
+    implementation("androidx.room:room-ktx:2.7.0")
+    implementation(libs.google.material)
+    implementation(libs.firebase.appdistribution.gradle)
+    kapt("androidx.room:room-compiler:2.7.0")
 
     // Firebase — fixed version
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
@@ -78,15 +98,28 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:20.7.0")
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-compiler:2.48")
-
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-compiler:2.51.1")
     // UI
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.material3)
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+// CardView
+    implementation("androidx.cardview:cardview:1.0.0")
+
+// SwipeRefreshLayout
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    // Firebase Cloud Messaging
+    implementation("com.google.firebase:firebase-messaging-ktx")
+
+// WorkManager
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
 
     // Testing
     testImplementation(libs.junit)

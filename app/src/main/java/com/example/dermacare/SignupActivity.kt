@@ -65,11 +65,38 @@ class SignupActivity : AppCompatActivity() {
 
             // Basic validation
             if (name.isEmpty()) {
-                Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show()
+                etName.error = "Name is required"
+                etName.requestFocus()
+                return@setOnClickListener
+            }
+            if (email.isEmpty()) {
+                etEmail.error = "Email is required"
+                etEmail.requestFocus()
+                return@setOnClickListener
+            }
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                etEmail.error = "Enter a valid email address"
+                etEmail.requestFocus()
+                return@setOnClickListener
+            }
+            if (password.isEmpty()) {
+                etPassword.error = "Password is required"
+                etPassword.requestFocus()
+                return@setOnClickListener
+            }
+            if (password.length < 6) {
+                etPassword.error = "Password must be at least 6 characters"
+                etPassword.requestFocus()
                 return@setOnClickListener
             }
             if (age.isEmpty()) {
-                Toast.makeText(this, "Please enter your age", Toast.LENGTH_SHORT).show()
+                etAge.error = "Age is required"
+                etAge.requestFocus()
+                return@setOnClickListener
+            }
+            if (age.toInt() < 13) {
+                etAge.error = "You must be at least 13 years old"
+                etAge.requestFocus()
                 return@setOnClickListener
             }
 

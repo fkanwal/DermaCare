@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Notification Permission (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <!-- Internet already added hai -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -11,16 +16,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DermaCare">
-        <activity android:name=".ui.theme.SignupActivity"
+        <activity
+            android:name=".ExpertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.TipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.theme.DashboardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.theme.SignupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.theme.MainActivity"/>
-        <activity android:name=".ui.theme.LoginActivity"/>
+        <activity android:name=".ui.theme.MainActivity" />
+        <activity android:name=".ui.theme.LoginActivity" />
+        <service android:name=".service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

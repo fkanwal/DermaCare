@@ -41,6 +41,8 @@ class LoginActivity : AppCompatActivity() {
         etEmail = findViewById(R.id.etlEmail)
         etPassword = findViewById(R.id.etlPassword)
         btnLogin = findViewById(R.id.btnlogin)
+        val btnsignup = findViewById<Button>(R.id.btnsignup)
+
         btnGoogleSignIn = findViewById(R.id.btnGoogleSignIn)
 
         // Setup Google Sign-In
@@ -82,7 +84,12 @@ class LoginActivity : AppCompatActivity() {
             val signInIntent = googleSignInClient.signInIntent
             googleSignInLauncher.launch(signInIntent)
         }
+        btnsignup.setOnClickListener {
+            startActivity(Intent(this, SignupActivity::class.java))
+            finish()
+        }
     }
+
 
     // Google Sign-In result
     private val googleSignInLauncher = registerForActivityResult(
@@ -104,4 +111,5 @@ class LoginActivity : AppCompatActivity() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
+
 }
